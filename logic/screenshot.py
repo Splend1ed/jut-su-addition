@@ -1,10 +1,12 @@
+import os
+
 import mss.tools
 import cv2  # opencv-python
 import pytesseract
 from logic.get_monitor import *
 
 
-pytesseract.pytesseract.tesseract_cmd = "D:\\Tesseract\\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = os.environ["PYTESSERACT_PATH"]
 
 
 def make_screenshot():
